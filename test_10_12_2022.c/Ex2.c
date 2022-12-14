@@ -99,7 +99,7 @@ void showResult(float* interest, float* sum, int size) {
 	printf("\n%-10s%-20s%-20s\n", "Year", "Interest", "Sum");
 
 	for (int i = 0; i < size; i++) {
-		printf("%-10d%-20.4f%-20.4f\n", i + 1, interest[i], sum[i]);
+		printf("\n%-10d%-20.4f%-20.4f\n", i + 1, interest[i], sum[i]);
 
 	}
 	puts(" ");

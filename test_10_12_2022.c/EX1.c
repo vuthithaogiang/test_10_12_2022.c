@@ -3,7 +3,7 @@
 
 #include<stdio.h>
 
-unsigned long long factorial(unsigned int n);
+unsigned long long fibonacci(unsigned int n);
 
 int main() {
 
@@ -16,8 +16,9 @@ int main() {
 		printf("\nPlease enter value number 1 - 100.");
 	}
 	else {
-		unsigned long long result = factorial(number);
-		printf("\nFn = %llu", result);
+
+		unsigned long long result = fibonacci(number);
+		printf("\nF%u = %llu ", number, result);
 
 	}
 
@@ -25,12 +26,12 @@ int main() {
 	return 0;
 }
 
-unsigned long long factorial(unsigned int n) {
+unsigned long long fibonacci(unsigned int n) {
 
-	if (n < 2) {
-		return 1;
+	if (n == 0 || n == 1) {
+		return n ;
 	}
 	else {
-		return n * factorial(n - 1);
+		return fibonacci(n - 1) + fibonacci(n - 2);
 	}
 }
